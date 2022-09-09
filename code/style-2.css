@@ -1,0 +1,404 @@
+/* ============== Google Font ================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800&display=swap');
+
+/* ================= Color ================== */
+
+:root {
+    --white: #fff;
+    --black: hsl(0, 0%, 0%);
+    --green: hsl(85, 59%, 45%);
+}
+
+/* ================ Base ===================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    /* font-weight: 800; */
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: var(--green);
+}
+
+.container {
+    position: relative;
+    max-width: 1440px;
+    max-height: 950px;
+    width: 100%;
+    height: 100%;
+    margin: 0 30px;
+    background: #FFFFFF;
+    border-radius: 30px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* ============ Navbar ================= */
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 85px 97px;
+}
+
+nav .brand img{
+    height: 45px;
+    object-fit: cover;
+}
+nav .nav-right .nav-links a{
+    text-decoration: none;
+    margin:0 40px;
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--black);
+    transition: all 0.3s ease;
+}
+
+nav .nav-right .nav-links a:hover{
+    color: var(--green);
+}
+nav .nav-search{
+    position: relative;
+    font-size: 15px;
+}
+
+nav .nav-search input{
+    padding: 12px 15px;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    border: 2px solid gray;
+}
+nav .nav-search i.magnify{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 80%;
+    font-size: 17px;
+    color: gray;
+
+}
+.hamberger{
+    font-size: 25px;
+    color: var(--green);
+    display: none;
+}
+
+/* ============= body content ============== */
+
+.body-content .content{
+    display: flex;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    padding: 0 100px; 
+}
+.body-content .content .title{
+    font-size: 32px;
+}
+.body-content .content .title h1{
+    position: relative;
+    z-index: 1;
+}
+ span{
+    color: var(--green);
+}
+.button{
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    margin-top: 69px;
+}
+.button .btn{
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--black);
+    padding: 12px 50px;
+    border: none;
+    border: 3px solid var(--green);
+    border-radius: 25px;
+    background-color: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+}
+.button .btn:hover{
+    color: var(--white);
+    background-color: var(--green);
+}
+.w-video{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.w-video i{
+    font-size: 34px;
+    color: var(--green);
+    margin-right: 11px;
+}
+.w-video span{
+    font-size: 24px;
+    font-weight: 800;
+}
+.w-video span:hover{
+    text-decoration: underline;
+}
+
+.body-content .content .right img{
+    position: relative;
+    z-index: 1;  
+}
+
+
+
+@media (max-width:1250px){
+    .body-content .content{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap-reverse;
+    }
+    .body-content .content .right img{
+        height: 450px;
+        object-fit: cover;
+    }
+    .body-content .content .title{
+        font-size: 26px;
+    }
+    .body-content .content .left{
+        margin-top: 2.5rem;
+    }
+    .button{
+        margin-top: 2rem;
+    }
+}
+@media (max-width:1020px){
+    nav .nav-right .nav-links{
+        display: none;
+    }
+    nav .nav-search{
+        display: none;
+    }
+    .hamberger{
+        display: block;
+    }
+}
+@media (max-width:800px){
+    .body-content .content .right img{
+        height: 400px;
+        object-fit: cover;
+    }
+    .body-content .content .title{
+        font-size: 26px;
+    }
+    .button .btn{
+        font-size: 15px;
+    }
+    .w-video i{
+        font-size: 25px;
+    }
+    .w-video span{
+        font-size: 17px;
+    }
+    .button{
+        margin-top: 2.5rem;
+    }
+    .body-content .content .left{
+        margin-top: 3.6rem;
+    }
+    .container{
+        max-height: 970px;
+        height: 100%;
+    }
+}
+@media (max-width:690px){
+     .body-content .content .right img{
+        height: 315px;
+        object-fit: cover;
+    }
+    .body-content .content .title{
+        font-size: 22px;
+    }
+    .button .btn{
+        font-size: 13px;
+        padding: 12px 40px;
+    }
+    .w-video i{
+        font-size: 20px;
+    }
+    .w-video span{
+        font-size: 14px;
+    }
+    .button{
+        margin-top: 2.5rem;
+    }
+    .body-content .content .left{
+        margin-top: 3rem;
+    }
+    .container{
+        max-height: 870px;
+        height: 100%;
+    }
+}
+
+@media (max-width:630px){
+     .body-content .content .right img{
+        height: 250px;
+        object-fit: cover;
+    }
+    .body-content .content .title{
+        font-size: 18px;
+    }
+    .button .btn{
+        font-size: 10px;
+        padding: 12px 35;
+    }
+    .w-video i{
+        font-size: 16px;
+    }
+    .w-video span{
+        font-size: 11px;
+    }
+    .button{
+        margin-top: 2.5rem;
+    }
+    .body-content .content .left{
+        margin-top: 3rem;
+    }
+    .container{
+        max-height: 730px;
+        height: 100%;
+    }
+    nav {
+        padding: 60px 70px;
+    }
+}
+@media (max-width:560px){
+    nav .brand img{
+        height: 30px;
+        object-fit: cover;
+    }
+    .body-content .content .right img{
+        height: 250px;
+        object-fit: cover;
+    }
+    .body-content .content .title{
+        font-size: 14px;
+    }
+    .button .btn{
+        font-size: 10px;
+        padding: 12px 30px;
+    }
+    .w-video i{
+        font-size: 16px;
+        margin-right: 3px;
+    }
+    .w-video span{
+        font-size: 11px;
+    }
+    .button{
+        margin-top: 2rem;
+    }
+    .body-content .content .left{
+        margin-top: 2rem;
+    }
+    .container{
+        max-height: 625px;
+        height: 100%;
+    }
+    nav {
+        padding: 50px 60px;
+    }
+}
+
+@media (max-width:432px){
+    .body-content .content .right img{
+        height: 185px;
+        object-fit: cover;
+    }
+    .body-content .content .title {
+        font-size: 9px;
+    }
+    
+    .button .btn {
+        font-size: 8px;
+        padding: 8px 13px;
+    }
+    
+    .w-video i {
+        font-size: 8px;
+        margin-right: 3px;
+    }
+    
+    .w-video span {
+        font-size: 10px;
+    }
+    
+    .button {
+        margin-top: 1.5rem;
+    }
+    
+    .body-content .content .left {
+        margin-top: 1.5rem;
+    }
+    
+    .container {
+        max-height: 480px;
+        height: 100%;
+    }
+    
+    nav {
+        padding: 35px 45px;
+    }
+
+}
+@media (max-width:353px){
+    .body-content .content .right img{
+        height: 155px;
+        object-fit: cover;
+    }
+    .body-content .content .title {
+        font-size: 7px;
+    }
+    
+    .button .btn {
+        font-size: 5px;
+        padding: 8px 8px;
+        border-radius: 10px;
+    }
+    
+    .w-video i {
+        font-size: 7px;
+        margin-right: 0px;
+    }
+    
+    .w-video span {
+        font-size: 7px;
+    }
+    
+    .button {
+        margin-top: 1rem;
+    }
+    
+    .body-content .content .left {
+        margin-top: 1rem;
+    }
+    
+    .container {
+        max-height: 395px;
+        height: 100%;
+    }
+    
+    nav {
+        padding: 30px 40px;
+    }
+
+}
